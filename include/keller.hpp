@@ -1,6 +1,7 @@
 #ifndef KELLER_H
 #define KELLER_H
-class keller
+#include "employee.hpp"
+class keller : public employee
 {
 private: 
     /* data */
