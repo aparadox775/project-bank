@@ -8,6 +8,12 @@ struct date
     short day;
     short mounth;
     short year;
+    std::string tostdString()
+    {
+        std::string ret;
+        ret = std::to_string(day) + "/" +std::to_string(mounth) + "/" + std::to_string(year);
+        return ret;
+    }
 };
 
 struct phoneNumber
