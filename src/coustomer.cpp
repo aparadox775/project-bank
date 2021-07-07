@@ -8,30 +8,104 @@ coustomer::coustomer(/* args */)
 coustomer::~coustomer()
 {
 }
-std::string coustomer::getname(){return this->name;}
-std::string coustomer::getId(){return this->id;}
-std::string coustomer::getshsh(){return this->shsh;}
-std::string coustomer::getworkAdress(){return this->workAdress;}
-std::string coustomer::getHomeAdress(){return this->homeAdrees;}
-std::string coustomer::getEmail(){return this->eMail;}
 
-std::vector<account*> coustomer::getAccounts(){return this->accounts;}
+const std::string& coustomer::GetName() const
+{
+    return name;
+}
 
-phoneNumber coustomer::getNumbers(){return this->numbers;}
+void coustomer::SetName(const std::string& name)
+{
+    coustomer::name = name;
+}
 
-date coustomer::getAssingmentDate(){return this->assingmentDate;}
-date coustomer::getBirthDate(){return this->birthDate;}
+const std::string& coustomer::GetId() const
+{
+    return id;
+}
 
-std::string coustomer::setname(){}
-std::string coustomer::setId(){}
-std::string coustomer::setshsh(){}
-std::string coustomer::setworkAdress(){}
-std::string coustomer::setHomeAdress(){}
-std::string coustomer::setEmail(){}
+void coustomer::SetId(const std::string& id)
+{
+    coustomer::id = id;
+}
 
-std::vector<account*> coustomer::setAccounts(){}
+const std::string& coustomer::GetShsh() const
+{
+    return shsh;
+}
 
-phoneNumber coustomer::setNumbers(){}
+void coustomer::SetShsh(const std::string& shsh)
+{
+    coustomer::shsh = shsh;
+}
 
-date coustomer::setAssingmentDate(){}
-date coustomer::setBirthDate(){}
+const std::string& coustomer::GetWorkAdress() const
+{
+    return workAdress;
+}
+
+void coustomer::SetWorkAdress(const std::string& workAdress)
+{
+    coustomer::workAdress = workAdress;
+}
+
+const std::string& coustomer::GetHomeAdrees() const
+{
+    return homeAdrees;
+}
+
+void coustomer::SetHomeAdrees(const std::string& homeAdrees)
+{
+    coustomer::homeAdrees = homeAdrees;
+}
+
+const std::string& coustomer::GetEMail() const
+{
+    return eMail;
+}
+
+void coustomer::SetEMail(const std::string& eMail)
+{
+    coustomer::eMail = eMail;
+}
+
+const std::vector<account*>& coustomer::GetAccounts() const
+{
+    return accounts;
+}
+
+void coustomer::SetAccounts(const std::vector<account*>& accounts)
+{
+    coustomer::accounts = accounts;
+}
+
+const phoneNumber& coustomer::GetNumbers() const
+{
+    return numbers;
+}
+
+void coustomer::SetNumbers(const phoneNumber& numbers)
+{
+    coustomer::numbers = numbers;
+}
+
+const date& coustomer::GetAssingmentDate() const
+{
+    return assingmentDate;
+}
+
+void coustomer::SetAssingmentDate(const date& assingmentDate)
+{
+    coustomer::assingmentDate = assingmentDate;
+}
+
+const date& coustomer::GetBirthDate() const
+{
+    return birthDate;
+}
+
+void coustomer::SetBirthDate(const date& birthDate)
+{
+    coustomer::birthDate = birthDate;
+}
+
