@@ -61,6 +61,20 @@ public:
     date getAssingmentDate();
     date getBirthDate();
 
+    std::string setname();
+    std::string setId();
+    std::string setshsh();
+    std::string setworkAdress();
+    std::string setHomeAdress();
+    std::string setEmail();
+
+    std::vector<account*> setAccounts();
+
+    phoneNumber setNumbers();
+
+    date setAssingmentDate();
+    date setBirthDate();
+
     // coustomer(std::string,std::string,std::string,std::string,std::string);
     ~coustomer();
 };
