@@ -20,7 +20,7 @@ struct date
 class account
 {
 private:
-    unsigned int balance;
+    unsigned long int balance;
     std::string accountID;
     date accountInitDate;
 
@@ -28,9 +28,9 @@ public:
     account();
     ~account();
 
-    unsigned int GetBalance() const;
+    unsigned long int GetBalance() const;
 
-    void SetBalance(unsigned int balance);
+    void SetBalance(unsigned long int balance);
 
     const std::string& GetAccountId() const;
 

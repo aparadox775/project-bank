@@ -5,10 +5,19 @@
 #ifndef GOLS_BANK_HPP
 #define GOLS_BANK_HPP
 
+#include <vector>
+#include <algorithm>
+#include "account.hpp"
+#include "coustomer.hpp"
 
 class bank
 {
-
+private:
+    account bankacc;
+    std::vector<coustomer> coustomers;
+public:
+    std::vector<account *> getCoustomeracc(std::string);
+    bank();
 };
 
 

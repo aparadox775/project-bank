@@ -7,12 +7,12 @@ account::~account()
 {
 }
 
-unsigned int account::GetBalance() const
+unsigned long int account::GetBalance() const
 {
     return balance;
 }
 
-void account::SetBalance(unsigned int balance)
+void account::SetBalance(unsigned long int balance)
 {
     account::balance = balance;
 }

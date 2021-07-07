@@ -3,3 +3,18 @@
 //
 
 #include "bank.hpp"
+
+bank::bank()
+{
+    this->bankacc.SetBalance(100000000000);
+}
+
+std::vector<account*> bank::getCoustomeracc(std::string id)
+{
+    for (coustomer const& temp: coustomers)
+    {
+        if (temp.GetId() == id)
+            return temp.GetAccounts();
+    }
+}
+
