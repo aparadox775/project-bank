@@ -17,7 +17,7 @@ private:
     /* data */
 public:
     employee(/* args */);
-    virtual ~employee() = 0;
+    ~employee();
 
     int getEmployeeNumber() const;
 

@@ -17,8 +17,9 @@ add_executable(${PROJECT_NAME}
         #        include/employee.hpp
         #        include/boss.hpp
         #        include/boxOfficeEmployee.hpp
-        #        include/keller.hpp)
+        #        include/keller.hpp
         src/bank.cpp
-        #include/bank.hpp)
+        #include/bank.hpp
+        )
 
 target_include_directories(${PROJECT_NAME} PUBLIC include/)

@@ -1,7 +1,10 @@
-#include <employee.hpp>
+#include "employee.hpp"
 
 employee::employee() {
 
+}
+employee::~employee()
+{
 }
 
 int employee::getEmployeeNumber() const {
