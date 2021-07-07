@@ -5,19 +5,6 @@
 #include <vector>
 #include "account.hpp"
 
-struct date
-{
-    short day;
-    short mounth;
-    short year;
-
-    std::string tostdString()
-    {
-        std::string ret;
-        ret = std::to_string(day) + "/" + std::to_string(mounth) + "/" + std::to_string(year);
-        return ret;
-    }
-};
 
 struct phoneNumber
 {
@@ -47,36 +34,40 @@ private:
 public:
     coustomer();
 
-    std::string getname();
-    std::string getId();
-    std::string getshsh();
-    std::string getworkAdress();
-    std::string getHomeAdress();
-    std::string getEmail();
 
-    std::vector<account*> getAccounts();
-
-    phoneNumber getNumbers();
-
-    date getAssingmentDate();
-    date getBirthDate();
-
-    std::string setname();
-    std::string setId();
-    std::string setshsh();
-    std::string setworkAdress();
-    std::string setHomeAdress();
-    std::string setEmail();
-
-    std::vector<account*> setAccounts();
-
-    phoneNumber setNumbers();
-
-    date setAssingmentDate();
-    date setBirthDate();
 
     // coustomer(std::string,std::string,std::string,std::string,std::string);
     ~coustomer();
+
+    const std::string& GetName() const;
+    void SetName(const std::string& name);
+
+    const std::string& GetId() const;
+    void SetId(const std::string& id);
+
+    const std::string& GetShsh() const;
+    void SetShsh(const std::string& shsh);
+
+    const std::string& GetWorkAdress() const;
+    void SetWorkAdress(const std::string& workAdress);
+
+    const std::string& GetHomeAdrees() const;
+    void SetHomeAdrees(const std::string& homeAdrees);
+
+    const std::string& GetEMail() const;
+    void SetEMail(const std::string& eMail);
+
+    const std::vector<account*>& GetAccounts() const;
+    void SetAccounts(const std::vector<account*>& accounts);
+
+    const phoneNumber& GetNumbers() const;
+    void SetNumbers(const phoneNumber& numbers);
+
+    const date& GetAssingmentDate() const;
+    void SetAssingmentDate(const date& assingmentDate);
+
+    const date& GetBirthDate() const;
+    void SetBirthDate(const date& birthDate);
 };
 
 #endif
