@@ -10,6 +10,6 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
     src/coustomer.cpp
     src/account.cpp
-)
+        src/employee.cpp src/boss.cpp src/boxOfficeEmployee.cpp include/employee.h include/boss.h include/boxOfficeEmployee.h src/keller.cpp include/keller.h)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include/)
