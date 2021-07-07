@@ -3,3 +3,11 @@
 //
 
 #include "keller.hpp"
+
+keller::keller() {
+
+}
+
+keller::~keller() {
+
+}

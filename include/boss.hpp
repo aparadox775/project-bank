@@ -1,9 +1,9 @@
 #ifndef BOSS_H
 #define BOSS_H
 #include "employee.hpp"
-class boss
+class boss : public employee
 {
-private : public employee
+private :
     /* data */
 public:
     boss(/* args */);
