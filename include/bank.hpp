@@ -14,9 +14,17 @@ class bank
 {
 private:
     account bankacc;
-    std::vector<coustomer> coustomers;
+    std::vector<coustomer *> coustomers;
 public:
     std::vector<account *> getCoustomeracc(std::string);
+    std::vector<coustomer *> searchName(std::string);
+    std::vector<coustomer *> searchId(std::string);
+    std::vector<coustomer *> searchAccNum(std::string);
+    std::vector<account *> getacc(coustomer *);
+    coustomer * cardSearch(std::string);
+    std::vector<coustomer *> bDateSearch(date);
+    std::vector<coustomer *> morethanBalance(unsigned long int);
+    std::vector<account *> accInitEarlierThanOwner();
     bank();
 };
 

@@ -9,7 +9,7 @@ struct date
     short mounth;
     short year;
 
-    std::string tostdString()
+    const std::string tostdString() const
     {
         std::string ret;
         ret = std::to_string(day) + "/" + std::to_string(mounth) + "/" + std::to_string(year);
