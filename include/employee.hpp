@@ -3,6 +3,23 @@
 
 #include <string>
 
+struct date
+{
+    short day;
+    short mounth;
+    short year;
+
+    const std::string tostdString() const
+    {
+        std::string ret;
+        ret = std::to_string(day) + "/" + std::to_string(mounth) + "/" + std::to_string(year);
+        return ret;
+    }
+
+};
+
+
+
 class employee
 {
 private:
@@ -12,8 +29,9 @@ private:
     std::string name;
     std::string internationalCode;
     std::string fatherName;
-    std::string dateOfBirth;
+    date dateOfBirth;
     std::string identityNumber;
+    date * temp;
     /* data */
 public:
     employee(/* args */);
@@ -30,7 +48,6 @@ public:
     int getSalary() const;
 
     void setSalary(int salary);
-
     const std::string &getName() const;
 
     void setName(const std::string &name);
@@ -43,9 +60,9 @@ public:
 
     void setFatherName(const std::string &fatherName);
 
-    const std::string &getDateOfBirth() const;
+    const date &getDateOfBirth() const;
 
-    void setDateOfBirth(const std::string &dateOfBirth);
+    void setDateOfBirth(const date &dateOfBirth);
 
     const std::string &getIdentityNumber() const;
 

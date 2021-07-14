@@ -5,6 +5,7 @@
 #include "keller.hpp"
 #include "boxOfficeEmployee.hpp"
 #include "bank.hpp"
+#include "boss.hpp"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ int main()
 {
     int choise, choise1;
     vector<coustomer*> coustomers;
+    vector<employee*> emps;
     coustomer name;
     cout << "testrun";
     bank Bank;
@@ -58,8 +60,72 @@ int main()
             break;
         case 2:
         {
+            boss* temp = new boss;
+            cout << "enter name: \n";
+            string name;
+            temp->setName(name);
+            cout << "entere birth date yyyy/mm/dd (divide by space):" << endl;
+            {
+                short yy, mm, dd;
+                cin >> yy;
+                cin >> mm;
+                cin >> dd;
+                date* tempBdate = new date;
+                tempBdate->day = dd;
+                tempBdate->year = yy;
+                tempBdate->mounth = mm;
+                temp->setDateOfBirth(*tempBdate);
+            }
+            emps.push_back(temp);
+
 
         }
+            break;
+        case 3:
+        {
+            boxOfficeEmployee* temp = new boxOfficeEmployee;
+            cout << "enter name: \n";
+            string name;
+            temp->setName(name);
+            cout << "entere birth date yyyy/mm/dd (divide by space):" << endl;
+            {
+                short yy, mm, dd;
+                cin >> yy;
+                cin >> mm;
+                cin >> dd;
+                date* tempBdate = new date;
+                tempBdate->day = dd;
+                tempBdate->year = yy;
+                tempBdate->mounth = mm;
+                temp->setDateOfBirth(*tempBdate);
+            }
+            emps.push_back(temp);
+
+        }
+            break;
+        case 4:
+        {
+            keller* temp = new keller;
+            cout << "enter name: \n";
+            string name;
+            temp->setName(name);
+            cout << "entere birth date yyyy/mm/dd (divide by space):" << endl;
+            {
+                short yy, mm, dd;
+                cin >> yy;
+                cin >> mm;
+                cin >> dd;
+                date* tempBdate = new date;
+                tempBdate->day = dd;
+                tempBdate->year = yy;
+                tempBdate->mounth = mm;
+                temp->setDateOfBirth(*tempBdate);
+            }
+            emps.push_back(temp);
+
+        }
+            break;
+        default:
             break;
         }
     }
@@ -88,6 +154,20 @@ int main()
 
         tempAccs.push_back(tempAcc);
 
+    }
+        break;
+    case 3:
+    {
+        cout << "coustomer id:\n";
+        string id;
+        cin >> id;
+
+        coustomer* temp = Bank.searchId(id);
+        vector<account*> acVec = temp->GetAccounts();
+        for (account* tem: acVec)
+        {
+            cout << "acc id: " << tem->GetAccountId() << "balance: " << tem->GetBalance() << endl;
+        }
     }
         break;
     default:

@@ -6,8 +6,8 @@ class boss : public employee
 private :
     /* data */
 public:
-    boss(/* args */);
-    ~boss();
+//    boss(/* args */);
+//    ~boss();
 };
 
 #endif

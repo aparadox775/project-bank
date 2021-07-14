@@ -5,20 +5,20 @@
 #include "card.hpp"
 #include "boxOfficeEmployee.hpp"
 
-struct date
-{
-    short day;
-    short mounth;
-    short year;
-
-    const std::string tostdString() const
-    {
-        std::string ret;
-        ret = std::to_string(day) + "/" + std::to_string(mounth) + "/" + std::to_string(year);
-        return ret;
-    }
-
-};
+//struct date
+//{
+//    short day;
+//    short mounth;
+//    short year;
+//
+//    const std::string tostdString() const
+//    {
+//        std::string ret;
+//        ret = std::to_string(day) + "/" + std::to_string(mounth) + "/" + std::to_string(year);
+//        return ret;
+//    }
+//
+//};
 class account
 {
 private:
