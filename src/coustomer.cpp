@@ -69,7 +69,7 @@ void coustomer::SetEMail(const std::string& eMail)
     coustomer::eMail = eMail;
 }
 
-const std::vector<account*>& coustomer::GetAccounts() const
+std::vector<account*>& coustomer::GetAccounts()
 {
     return accounts;
 }

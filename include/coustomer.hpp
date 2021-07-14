@@ -57,7 +57,7 @@ public:
     const std::string& GetEMail() const;
     void SetEMail(const std::string& eMail);
 
-    const std::vector<account*>& GetAccounts() const;
+    std::vector<account*>& GetAccounts();
     void SetAccounts(const std::vector<account*>& accounts);
 
     const phoneNumber& GetNumbers() const;

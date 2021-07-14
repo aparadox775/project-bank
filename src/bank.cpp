@@ -48,15 +48,17 @@ std::vector<coustomer*> bank::searchAccNum(std::string accNumInput)
     return ret;
 }
 
-std::vector<coustomer*> bank::searchId(std::string id)
+coustomer* bank::searchId(std::string id)
 {
     std::vector<coustomer*> ret;
     for (coustomer* temp:this->coustomers)
     {
         if (temp->GetId() == id)
-            ret.push_back(temp);
+            return temp;
+
+        //            ret.push_back(temp);
     }
-    return ret;
+//    return ret;
 }
 
 std::vector<account*> bank::getacc(coustomer* cos)
@@ -147,7 +149,7 @@ bool bank::trsnriction(boxOfficeEmployee* office, bool increase, unsigned long a
     return suc;
 }
 
-void bank::addCoustomers(coustomer * coustomers)
+void bank::addCoustomers(coustomer* coustomers)
 {
     this->coustomers.push_back(coustomers);
 }

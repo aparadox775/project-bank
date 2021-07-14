@@ -19,7 +19,7 @@ private:
 public:
     std::vector<account *> getCoustomeracc(std::string);
     std::vector<coustomer *> searchName(std::string);
-    std::vector<coustomer *> searchId(std::string);
+    coustomer * searchId(std::string);
     std::vector<coustomer *> searchAccNum(std::string);
     std::vector<account *> getacc(coustomer *);
     coustomer * cardSearch(std::string);

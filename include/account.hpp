@@ -43,7 +43,7 @@ public:
 
     void SetAccountInitDate(const date& accountInitDate);
     bool increas (unsigned long int);
-    bool decrease (unsinged long int );
+    bool decrease (unsigned long int );
 };
 
 #endif
