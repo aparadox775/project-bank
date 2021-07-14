@@ -9,6 +9,7 @@
 #include <algorithm>
 #include "account.hpp"
 #include "coustomer.hpp"
+#include "boxOfficeEmployee.hpp"
 
 class bank
 {
@@ -25,6 +26,11 @@ public:
     std::vector<coustomer *> bDateSearch(date);
     std::vector<coustomer *> morethanBalance(unsigned long int);
     std::vector<account *> accInitEarlierThanOwner();
+    //if the input bool == true --> it will increase the account balane
+    bool trsnriction (boxOfficeEmployee *,bool,unsigned long ,account *);
+
+    void addCoustomers(coustomer * coustomers);
+
     bank();
 };
 

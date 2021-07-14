@@ -1,4 +1,5 @@
 #include "account.hpp"
+
 account::account(/* args */)
 {
 }
@@ -35,4 +36,19 @@ const date& account::GetAccountInitDate() const
 void account::SetAccountInitDate(const date& accountInitDate)
 {
     account::accountInitDate = accountInitDate;
+}
+
+bool account::increas(unsigned long int input)
+{
+    this->balance = this->balance + input;
+    return true;
+}
+
+bool account::decrease(unsigned long input)
+{
+    if (input > balance)
+        return false;
+    else
+        this->balance = this->balance - input;
+    return true;
 }

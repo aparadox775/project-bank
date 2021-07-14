@@ -107,24 +107,25 @@ std::vector<coustomer*> bank::morethanBalance(unsigned long int input)
     return forRet;
 
 }
-std::vector<account *> bank::accInitEarlierThanOwner()
+
+std::vector<account*> bank::accInitEarlierThanOwner()
 {
     std::vector<account*> forRet;
-    for (coustomer * temp: this->coustomers)
+    for (coustomer* temp: this->coustomers)
     {
         for (account* accTemp: temp->GetAccounts())
         {
-            if(accTemp->GetAccountInitDate().year < temp->GetAssingmentDate().year)
+            if (accTemp->GetAccountInitDate().year < temp->GetAssingmentDate().year)
             {
                 forRet.push_back(accTemp);
                 break;
             }
-            if(accTemp->GetAccountInitDate().mounth < temp->GetAssingmentDate().mounth)
+            if (accTemp->GetAccountInitDate().mounth < temp->GetAssingmentDate().mounth)
             {
                 forRet.push_back(accTemp);
                 break;
             }
-            if(accTemp->GetAccountInitDate().day < temp->GetAssingmentDate().day)
+            if (accTemp->GetAccountInitDate().day < temp->GetAssingmentDate().day)
             {
                 forRet.push_back(accTemp);
                 break;
@@ -134,4 +135,19 @@ std::vector<account *> bank::accInitEarlierThanOwner()
     }
     return forRet;
 
+}
+
+bool bank::trsnriction(boxOfficeEmployee* office, bool increase, unsigned long amount, account* acc)
+{
+    bool suc;
+    if (increase)
+        suc = acc->increas(amount);
+    else
+        suc = acc->decrease(amount);
+    return suc;
+}
+
+void bank::addCoustomers(coustomer * coustomers)
+{
+    this->coustomers.push_back(coustomers);
 }

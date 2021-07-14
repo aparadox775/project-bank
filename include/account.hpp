@@ -2,6 +2,8 @@
 #define ACCOUNT_H
 
 #include <iostream>
+#include "card.hpp"
+#include "boxOfficeEmployee.hpp"
 
 struct date
 {
@@ -23,7 +25,8 @@ private:
     unsigned long int balance;
     std::string accountID;
     date accountInitDate;
-
+    std::string creditCardId;
+//    creditCard Card;
 public:
     account();
     ~account();
@@ -39,6 +42,8 @@ public:
     const date& GetAccountInitDate() const;
 
     void SetAccountInitDate(const date& accountInitDate);
+    bool increas (unsigned long int);
+    bool decrease (unsinged long int );
 };
 
 #endif

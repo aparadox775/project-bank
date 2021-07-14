@@ -20,6 +20,6 @@ add_executable(${PROJECT_NAME}
         #        include/keller.hpp
         src/bank.cpp
         #include/bank.hpp
-        )
+        src/card.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC include/)
